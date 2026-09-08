@@ -64,4 +64,4 @@ python marks_and_grade_analyzer.py
 
 **Riddhi Deshmukh**
 
-A beginner Python project created to practice basic Python programming concepts.
+
