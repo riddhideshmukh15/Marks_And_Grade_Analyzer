@@ -1,19 +1,29 @@
-# Marks and Grade Analyzer
+# 📊 Marks and Grade Analyzer
 
-A simple Python program that takes a student's marks and calculates the total marks, percentage, highest marks, lowest marks, grade, and result.
+A beginner-friendly Python project that takes a student's name, subject names, and marks as input and generates a simple result report.
 
-## Features
+## ✨ Features
 
-* Enter student name
-* Enter number of subjects
-* Enter marks for each subject
-* Calculate total marks
-* Calculate percentage
-* Find highest and lowest marks
-* Assign grade based on percentage
-* Display Pass or Fail result
+* Takes student name as input
+* Takes the number of subjects
+* Allows the user to enter subject names
+* Takes marks for each subject
+* Calculates:
 
-## Grade Criteria
+  * Total marks
+  * Percentage
+  * Highest marks
+  * Lowest marks
+  * Overall grade
+  * Pass/Fail result
+* Displays all subjects with their marks
+* Simple and easy-to-understand Python code
+
+## 🛠️ Technologies Used
+
+* Python
+
+## 📌 Grading System
 
 | Percentage    | Grade |
 | ------------- | ----- |
@@ -24,44 +34,66 @@ A simple Python program that takes a student's marks and calculates the total ma
 | 50% - 59%     | D     |
 | Below 50%     | F     |
 
-## Requirements
+## ▶️ How to Run
 
-* Python 3.x
-
-## How to Run
-
-Clone the repository:
+1. Make sure Python is installed on your computer.
+2. Open Command Prompt or Terminal.
+3. Go to the project folder:
 
 ```bash
-git clone https://github.com/riddhideshmukh15/Marks_And_Grade_Analyzer.git
+cd "D:\Python_learning\Marks and Grade Analyzer"
 ```
 
-Open the project folder:
+4. Run the program:
 
 ```bash
-cd Marks_And_Grade_Analyzer
+python marks_grade_analyzer.py
 ```
 
-Run the program:
+## 💻 Example
 
-```bash
-python marks_and_grade_analyzer.py
+```text
+MARKS AND GRADE ANALYZER
+
+Enter student name: Riddhi
+Enter number of subjects: 3
+
+Enter Subject Names:
+Enter subject name: Maths
+Enter subject name: Physics
+Enter subject name: Chemistry
+
+Enter Marks:
+Enter marks for Maths: 85
+Enter marks for Physics: 78
+Enter marks for Chemistry: 92
+
+==== RESULT ====
+Student Name: Riddhi
+
+Subjects and Marks:
+Maths : 85
+Physics : 78
+Chemistry : 92
+
+Total Marks: 255
+Percentage: 85.0 %
+Highest Marks: 92
+Lowest Marks: 78
+Grade: A
+Result: Pass
 ```
 
-## Concepts Used
+## 🚀 Future Improvements
 
-* Variables
-* Input and Output
-* Lists
-* For Loop
-* Conditional Statements
-* `sum()`
-* `max()`
-* `min()`
-* F-strings
+* Add individual grades for each subject
+* Add remarks based on percentage
+* Add marks validation
+* Save the result as a text file
+* Create a menu-based system
 
-## Author
+## 👩‍💻 Author
 
 **Riddhi Deshmukh**
 
-
+This project was created as part of my Python learning journey.
