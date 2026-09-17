@@ -96,4 +96,3 @@ Result: Pass
 
 **Riddhi Deshmukh**
 
-This project was created as part of my Python learning journey.
