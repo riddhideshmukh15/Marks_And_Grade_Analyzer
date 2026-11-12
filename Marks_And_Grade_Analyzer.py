@@ -1,53 +1,101 @@
-print("MARKS AND GRADE ANALYZER")
 
-name = input("Enter student name: ")
-subjects = int(input("Enter number of subjects: "))
+students = {}
 
-subject_names = []
-marks = []
-print("\nEnter Subject Names")
-for i in range(subjects):
-    subject = input("Enter subject name: ")
-    subject_names.append(subject)
+while True:
 
-print("\nEnter Marks:")
-for subject in subject_names:
-    mark = float(input(f"Enter marks for {subject}: "))
-    marks.append(mark)
-total = sum(marks)
-percentage = total / subjects
-highest = max(marks)
-lowest = min(marks)
-if percentage >= 90:
-    grade = "A+"
-elif percentage >= 80:
-    grade = "A"
-elif percentage >= 70:
-    grade = "B"
-elif percentage >= 60:
-    grade = "C"
-elif percentage >= 50:
-    grade = "D"
-else:
-    grade = "F"
+    print("\n===== MARKS AND GRADE ANALYZER =====")
+    print("1. Add Student Result")
+    print("2. Search Student")
+    print("3. Exit")
 
-if percentage >= 50:
-    result = "Pass"
-else:
-    result = "Fail"
+    choice = input("Enter your choice: ")
 
-print("\n==== RESULT ====")
-print("Student Name:", name)
+    if choice == "1":
 
-print("\nSubjects and Marks:")
-for i in range(subjects):
-    print(subject_names[i], ":", marks[i])
+        name = input("Enter student name: ")
+        subjects = int(input("Enter number of subjects: "))
 
-print("\nTotal Marks:", total)
-print("Percentage:", percentage, "%")
-print("Highest Marks:", highest)
-print("Lowest Marks:", lowest)
-print("Grade:", grade)
-print("Result:", result)
+        subject_names = []
+        marks = []
 
-print("\nTHANK YOU FOR USING MARKS AND GRADE ANALYZER")
+        print("\nEnter Subject Names")
+
+        for i in range(subjects):
+            subject = input("Enter subject name: ")
+            subject_names.append(subject)
+
+        print("\nEnter Marks:")
+
+        for subject in subject_names:
+            mark = float(input(f"Enter marks for {subject}: "))
+            marks.append(mark)
+
+        total = sum(marks)
+        percentage = total / subjects
+        highest = max(marks)
+        lowest = min(marks)
+
+        if percentage >= 90:
+            grade = "A+"
+        elif percentage >= 80:
+            grade = "A"
+        elif percentage >= 70:
+            grade = "B"
+        elif percentage >= 60:
+            grade = "C"
+        elif percentage >= 50:
+            grade = "D"
+        else:
+            grade = "F"
+
+        if percentage >= 50:
+            result = "Pass"
+        else:
+            result = "Fail"
+
+        
+        students[name.lower()] = {
+            "subjects": subject_names,
+            "marks": marks,
+            "total": total,
+            "percentage": percentage,
+            "highest": highest,
+            "lowest": lowest,
+            "grade": grade,
+            "result": result
+        }
+
+        print("\nStudent result saved successfully!")
+
+    elif choice == "2":
+
+        search_name = input("Enter student name to search: ")
+
+        if search_name.lower() in students:
+
+            student = students[search_name.lower()]
+
+            print("\n===== STUDENT RESULT =====")
+            print("Student Name:", search_name)
+
+            print("\nSubjects and Marks:")
+
+            for i in range(len(student["subjects"])):
+                print(student["subjects"][i], ":", student["marks"][i])
+
+            print("\nTotal Marks:", student["total"])
+            print("Percentage:", student["percentage"], "%")
+            print("Highest Marks:", student["highest"])
+            print("Lowest Marks:", student["lowest"])
+            print("Grade:", student["grade"])
+            print("Result:", student["result"])
+
+        else:
+            print("Student not found!")
+
+    elif choice == "3":
+        print("Thank you for using Marks and Grade Analyzer!")
+        break
+
+    else:
+        print("Invalid choice! Please try again.")
