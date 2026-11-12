@@ -1,4 +1,4 @@
-📊 Marks and Grade Analyzer
+**📊 Marks and Grade Analyzer**
 
 
 ## About the Project
